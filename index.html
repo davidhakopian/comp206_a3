@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/assets/style.css" />
+</head>
+
+  <body>
+    <!-- Responses from written room.c program -->
+    <div class="output-banner">
+      <p class="output-text">
+        Welcome aboard the Stargate Enterprise. We are in dire need of a hand. Should you 
+        be willing to help us out, indicate so by typing PLAY in the command text box below.
+      </p>
+    </div>
+
+    <!-- Interactive basic command line -->
+    <form class="user-text-command-form" action="/www/room.cgi" method="POST">
+      <div class="command-text-input">
+        <label>Type your command in:</label>
+        <input name="user-command" type="text"/>
+        <button type="submit">Engage</button>
+      </div>
+      <!-- Inventory -->
+      <input name="inventory" type="hidden" value="0,1"/>
+    </form>
+
+    <!-- Navigational buttons for player -->
+    <form class="navigation-action-form">
+      <div class="navigation-action-buttons" action="/www/transport.py" method="POST">
+        <button name="direction" type="submit" value="north">
+          <!-- <a href="www.cs.mccgill.ca/~someuser">North</a> -->
+          North
+        </button>
+        <button name="direction" type="submit" value="south">
+          <!-- <a href="www.cs.mccgill.ca/~someuser">South</a> -->
+          South
+        </button>
+        <button name="direction" type="submit" value="east">
+          <!-- <a href="www.cs.mccgill.ca/~someuser">East</a> -->
+          East
+        </button>
+        <button name="direction" type="submit" value="west">
+          <!-- <a href="www.cs.mccgill.ca/~someuser">West</a> -->
+          West
+        </button>
+      </div>
+    </form>
+  </body>
+</html>

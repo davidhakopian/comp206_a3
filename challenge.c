@@ -5,7 +5,7 @@ int challenge(char *userInput) {
 	char *heads = "heads";
 	char *tails = "tails";
 
-	int randomNumber = rand() % 1;
+	int randomNumber = rand() % 2;
   /*
 	printf("%d\n", randomNumber);
 	printf("Reminder for myself while editing: 1 is heads, 0 is tails\n");*/

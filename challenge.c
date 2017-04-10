@@ -1,16 +1,9 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-int main(int argc, char* argv[]) {
+int challenge(char *userInput) {
 	
-	char input[6];
+	char input[6] = userInput;
 	char correctAnswer[6];
 	char *heads = "heads";
 	char *tails = "tails";
-	
-	printf("Welcome to Ferenginar, space explorer! Enter heads or tails on that bit of gold-pressed latinum (i.e. let's flip a coin) and see if the Rules of Acquisition are in your favour!\n");
-	scanf("%s", input);
 
 	int randomNumber = rand() % 1;
   /*

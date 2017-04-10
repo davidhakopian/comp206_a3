@@ -18,11 +18,9 @@ int challenge(char *userInput) {
 	}
 
 	if (strcmp(correctAnswer, input) == 0) {
-		printf("%s is correct! You win!\n", input);
 		return 1;
 	}
 	else {
-		printf("%s is incorrect. You lose.\n", input);
 		return 0;
 	}
 

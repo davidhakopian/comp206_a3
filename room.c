@@ -26,6 +26,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include "challenge.h"
 
 // macros
 #define BUFFER_SIZE 1024
@@ -227,7 +228,17 @@ void execute_command( char* cmd )
 {
   if (strncmp(cmd, "play", 4) == 0) {
 
-    // TODO: intialize `challenge.[py|c]`
+    printf("Welcome to Ferenginar, space explorer! Enter heads or tails on that bit of gold-pressed latinum (i.e. let's flip a coin) and see if the Rules of Acquisition are in your favour!\n");
+    
+    int userResult = challenge( char* cmd );
+    if (userResult == 0) {
+        printf("Your guess was incorrect. You lose.\n");
+        //Don't have to do anything to inventory
+    }
+    else {
+        printf("Your guess was correct! You win!\n");
+        //Update user's inventory with two gold or whatever
+    }
 
   } else if (strncmp(cmd, "drop", 4) == 0) {
 

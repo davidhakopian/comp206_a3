@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link type="text/css" rel="stylesheet" href="/assets/style.css" />
+  <link type="text/css" rel="stylesheet" href="http://www.cs.mcgill.ca/~dhakop/assets/style.css" />
 </head>
 
   <body>
@@ -14,7 +14,7 @@
     </div>
 
     <!-- Interactive basic command line -->
-    <form class="user-text-command-form" action="/www/room.cgi" method="POST">
+    <form class="user-text-command-form" action="http://www.cs.mcgill.ca/~dhakop/cgi-bin/room.cgi" method="POST">
       <div class="command-text-input">
         <label>Type your command in:</label>
         <input name="user-command" type="text"/>
@@ -25,25 +25,39 @@
     </form>
 
     <!-- Navigational buttons for player -->
-    <form class="navigation-action-form">
-      <div class="navigation-action-buttons" action="/www/transport.py" method="POST">
-        <button name="direction" type="submit" value="north">
-          <!-- <a href="www.cs.mccgill.ca/~someuser">North</a> -->
+    <div class="navigation-action-buttons">
+      <form class="navigation-action-form" action="http://www.cs.mcgill.ca/~dhakop/cgi-bin/transport.py" method="POST">
+        <!-- Inventory -->
+        <input name="inventory" value="0,1" type="hidden"/>
+        <input name="url" type="hidden" value="http://www.cs.mcgill.ca/~dhakop/cgi-bin/transport.py"/>
+        <buttontype="submit">
           North
         </button>
-        <button name="direction" type="submit" value="south">
-          <!-- <a href="www.cs.mccgill.ca/~someuser">South</a> -->
+      </form>
+      <form class="navigation-action-form" action="http://www.cs.mcgill.ca/~dhakop/cgi-bin/transport.py" method="POST">
+        <!-- Inventory -->
+        <input name="inventory" value="0,1" type="hidden"/>
+        <input name="url" type="hidden" value="http://www.cs.mcgill.ca/~dhakop/cgi-bin/transport.py"/>
+        <button type="submit">
           South
         </button>
-        <button name="direction" type="submit" value="east">
-          <!-- <a href="www.cs.mccgill.ca/~someuser">East</a> -->
+      </form>
+      <form class="navigation-action-form" action="http://www.cs.mcgill.ca/~nchowd9/cgi-bin/transport.py" method="POST">
+        <!-- Inventory -->
+        <input name="inventory" value="0,1" type="hidden"/>
+        <input name="url" type="hidden" value="http://www.cs.mcgill.ca/~dhakop/cgi-bin/transport.py"/>
+        <button type="submit">
           East
         </button>
-        <button name="direction" type="submit" value="west">
-          <!-- <a href="www.cs.mccgill.ca/~someuser">West</a> -->
+      </form>
+      <form class="navigation-action-form" action="http://cs.mcgill.ca/~smonfo1/cgi-bin/transport.py" method="POST">
+        <!-- Inventory -->
+        <input name="inventory" value="0,1" type="hidden"/>
+        <input name="url" type="hidden" value="http://www.cs.mcgill.ca/~dhakop/cgi-bin/transport.py"/>
+        <button type="submit">
           West
         </button>
-      </div>
-    </form>
+      </form>
+    </div>
   </body>
 </html>

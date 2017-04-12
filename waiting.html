@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="http://www.cs.mcgill.ca/~dhakop/assets/style.css" />
+</head>
+
+  <body>
+    <!-- Responses from written room.c program -->
+    <div class="output-banner">
+      <p class="output-text">
+        The room is currently occupied. Wait and click "Try Again" to try to enter or click
+        "Go Back" to go back to previous room.
+      </p>
+    </div>
+
+    <!-- Navigational buttons for player -->
+    
+      <div class="navigation-action-buttons">
+        <form class="navigation-action-form" action="url" method="POST">
+          <input name="inventory" type="hidden" value="inventory"/>
+          <button name="url" type="submit" value="http://www.cs.mcgill.ca/~dhakop/cgi-bin/transport.py">
+          Go Back
+          </button>
+        </form>
+
+        <form class="navigation-action-form" action="http://www.cs.mcgill.ca/~dhakop/cgi-bin/transport.py" method="POST">
+          <input name="inventory" type="hidden" value="inventory"/>
+          <button name="url" type="submit" value="url">
+          Try Again
+          </button>
+        </form>
+        
+      </div>
+    </form>
+  </body>
+</html>
